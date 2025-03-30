@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'empire</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -13,33 +12,46 @@
         <p id="T2">{Slogan de l'empire}</p>
         <div id="D1">
             <p id="F1">
-                <a class="espace" href="index.html">Accueil</a> 
+                <a class="espace" href="index.html">Accueil</a>
                 <a class="espace">Membres</a>
             </p>
         </div>
         <div id="C1">
             <img class="i1" src="12759597-007c-46e6-b809-90561764a665.webp" alt="...">
         </div>
-        <script>
-            let elements = document.querySelectorAll(".espace"); // Sélectionne les liens avec la classe 'espace'
-
-            elements.forEach(element => {
-                element.addEventListener("mouseover", () => {
-                    element.style.background = "linear-gradient(45deg, darkred, red)";
-                    element.style.color = "white"; // Change aussi la couleur du texte pour une meilleure visibilité
-                    element.style.borderRadius = "10px"; // Arrondi des coins
-
-                });
-
-                element.addEventListener("mouseout", () => {
-                    element.style.background = ""; // Remet le fond par défaut
-                    element.style.color = ""; // Remet la couleur du texte par défaut
-                    element.style.borderRadius = "0"; // Réinitialisation
-                });
-            });
-        </script>
     </header>
+
+    <script>
+        let elements = document.querySelectorAll(".espace");
+
+        elements.forEach(element => {
+            element.addEventListener("mouseover", () => {
+                element.style.background = "linear-gradient(45deg, darkred, red)";
+                element.style.color = "white";
+                element.style.borderRadius = "10px";
+            });
+
+            element.addEventListener("mouseout", () => {
+                element.style.background = "";
+                element.style.color = "";
+                element.style.borderRadius = "0";
+            });
+        });
+    </script>
+
     <main>
+        <section class="members-section">
+            <h2>Les Membres de l'Empire</h2>
+            <div class="members-list">
+                <div class="member empereur">Maxime (Empereur)</div>
+                <div class="member general">diel (Général)</div>
+                <div class="member">Lucifer (Membre)</div>
+                <div class="member">Swornd (Membre)</div>
+                <div class="member">Onix (Membre)</div>
+                <div class="member">Mline (Membre)</div>
+                <div class="member">Saker (Membre)</div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
