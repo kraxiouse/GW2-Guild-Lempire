@@ -1,133 +1,137 @@
-/* Style général */
+/* Corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom left, red, black);
-    color: white;
+    background-color: rgb(255, 117, 117); /* Fond rouge principal */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
+/* Header */
 header {
-    background: linear-gradient(to bottom left, darkred, black);
-    color: yellow;
-    text-align: center;
-    padding: 20px;
-    border-bottom: 5px solid black;
+    width: 95%;
+    height: 150px;
+    background: linear-gradient(to top right, red, black, red);
+    border-bottom-right-radius: 150px;
+    border-top-right-radius: 150px;
+    margin-left: -8px;
+    border: 2px solid black;
+}
+
+#C1 {
+    height: 143px;
+    width: 143px;
+    background-color: white;
+    border-radius: 150px;
+    margin-left: 1443px;
+    border: 4px solid black;
+    margin-top: -127.8px;
 }
 
 #T1 {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 60px;
+    color: yellow;
+    margin-left: 20px;
+    margin-top: 25.2px;
 }
 
 #T2 {
-    font-size: 18px;
+    font-size: 20px;
     color: aqua;
+    margin-left: 160px;
+    margin-top: -68px;
 }
 
-main {
-    padding: 20px;
+.i1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+#D1 {
+    width: 850px;
+    height: 80px;
+    background: linear-gradient(to bottom left, red, blue);
+    margin-left: 440px;
+    margin-top: -89.6px;
+    border-radius: 80px;
+}
+
+#D1 p {
+    font-size: 30px;
+}
+
+#F1 {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 0 20px #fff;
 }
 
-/* Barre de recherche */
-#search-container {
+.espace {
+    margin-right: 40px;
+    position: relative;
+    top: 20px;
+}
+
+/* Membres Section */
+.members-section {
+    padding: 40px 20px;
+    background: linear-gradient(to bottom left, darkred, rgb(177, 49, 49));
+    border-radius: 10px;
     margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#search-bar {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid #ccc;
-    background-color: #444;
+.members-section h2 {
+    font-size: 40px;
+    color: coral;
+    margin-bottom: 20px;
+}
+
+.members-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.member {
+    background: linear-gradient(45deg, rgba(50, 205, 50, 0.7), rgba(34, 139, 34, 0.7)); /* Fond des membres */
     color: white;
-}
-
-#search-bar:focus {
-    outline: none;
-    border-color: #ff4500;
-}
-
-/* Formulaire de création de page */
-#create-container {
-    margin-top: 40px;
-    background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px #ff4500;
-}
-
-#wiki-form input, #wiki-form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 2px solid #ff4500;
-    background-color: #555;
-    color: white;
-}
-
-#wiki-form button {
-    padding: 10px 20px;
-    background-color: #ff4500;
-    border: none;
-    border-radius: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    color: white;
 }
 
-#wiki-form button:hover {
-    background-color: #e33f00;
+.member:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Conteneur des pages créées */
-#wiki-pages {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
+/* Styles pour rôles */
+.empereur {
+    background: linear-gradient(45deg, #ffd700, #ff9d00); /* Or */
+    color: black;
 }
 
-.wiki-page {
-    background: linear-gradient(to bottom left, red, black);
-    width: 45%;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #ff4500;
-    color: white;
+.general {
+    background: linear-gradient(45deg, #ff4500, #ff6347); /* Rouge intense */
 }
 
-.wiki-page img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+/* Responsivité */
+@media (max-width: 768px) {
+    .members-list {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.wiki-page h3 {
-    font-size: 24px;
-    color: #ff4500;
-}
-
-.wiki-page p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.delete-button {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.delete-button:hover {
-    background-color: #e33f00;
+@media (max-width: 480px) {
+    .members-list {
+        grid-template-columns: 1fr;
+    }
 }
