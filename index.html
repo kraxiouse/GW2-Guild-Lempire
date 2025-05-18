@@ -1,134 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'empire</title>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Empire – Guilde GW2</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+    }
+
+    header {
+      background-color: #8b0000;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    h2 {
+      border-left: 5px solid #8b0000;
+      padding-left: 1rem;
+      margin-top: 3rem;
+    }
+
+    .role {
+      margin-left: 1.5rem;
+    }
+
+    .emperor { color: #ffd700; font-weight: bold; }       /* Jaune */
+    .general { color: #ff8c00; font-weight: bold; }       /* Orange */
+    .lieutenant { color: #1e90ff; font-weight: bold; }    /* Bleu */
+    .soldier { color: #32cd32; font-weight: bold; }       /* Vert */
+
+    .member-list {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .member {
+      padding: 0.2rem 0;
+    }
+
+    .event-bar {
+      width: 100%;
+      background-color: #8b0000;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    .event-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      margin-top: 4rem;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      background-color: #8b0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #b30000;
+    }
+
+    .footer-links a {
+      color: #f2f2f2;
+      margin: 0 1rem;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <p id="T1">L'empire</p>
-        <p id="T2">{Slogan de l'empire}</p>
-        <div id="D1">
-            <p id="F1">
-                <a class="espace" href="index.html">Accueil</a> 
-                <a class="espace" href="H2.html">Membres</a>
-            </p>
+  <header>
+    <h1>🛡️ L’Empire – Guilde Guild Wars 2</h1>
+    <p>Organisation • Fractales • Événements • Convivialité</p>
+  </header>
 
-        </div>
-        <div id="C1">
-            <img class="i1" src="12759597-007c-46e6-b809-90561764a665.webp" alt="...">
-        </div>
-        <script>
-            let elements = document.querySelectorAll(".espace"); // Sélectionne les liens avec la classe 'espace'
+  <section>
+    <h2>🛡️ Présentation de L’Empire</h2>
+    <p>L’Empire est une guilde PvE organisée, avec une ambiance à la fois sérieuse et détendue. On propose des activités régulières, une structure claire et des rôles bien définis pour que chaque membre puisse évoluer à son rythme.</p>
 
-            elements.forEach(element => {
-                element.addEventListener("mouseover", () => {
-                    element.style.background = "linear-gradient(45deg, darkred, red)";
-                    element.style.color = "white"; // Change aussi la couleur du texte pour une meilleure visibilité
-                    element.style.borderRadius = "10px"; // Arrondi des coins
+    <h2>⚔️ Ce qu’on fait</h2>
+    <ul>
+      <li>Un peu de fractales pour s’améliorer ensemble et progresser en équipe</li>
+      <li>Des événements communautaires (speedruns, défis, soirées spéciales...)</li>
+      <li>Des réunions régulières entre les hauts gradés</li>
+      <li>Et parfois, simplement jouer pour le plaisir dans un cadre structuré mais sans pression</li>
+    </ul>
 
-                });
+    <h2>🏛️ Hiérarchie impériale</h2>
+    <p class="role"><span class="emperor">👑 L’Empereur</span> – Maxime, fondateur de l’Empire et chef de la guilde</p>
+    <p class="role"><span class="general">🛡️ Généraux</span> – Diel, Lucifer</p>
+    <p class="role"><span class="lieutenant">⚔️ Lieutenants</span> – (À compléter)</p>
+    <p class="role"><span class="soldier">🪖 Soldats</span> – Donn, Dobi, Katako, Youkobox, Mline, Saker</p>
 
-                element.addEventListener("mouseout", () => {
-                    element.style.background = ""; // Remet le fond par défaut
-                    element.style.color = ""; // Remet la couleur du texte par défaut
-                    element.style.borderRadius = "0"; // Réinitialisation
-                });
-            });
-        </script>
-    </header>
-    <main>
-        <div id="D2">
-            <div id="C2">
-                <div id="image-container">
-                    <a href="" id=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 1"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 2"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 3"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 4"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 5"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 6"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 7"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 8"></a>
-                    <a href=""><img class="i2" src="12759597-007c-46e6-b809-90561764a665.webp" alt="Image 9"></a>
-                </div>
-            </div>
-            <div class="controls">
-                <button onclick="moveLeft()"><</button>
-                <button onclick="moveRight()">></button>
-            </div>
-        </div>
-        <script>
-            let container = document.getElementById("image-container");
-            let index = 0;
-            const totalImages = document.querySelectorAll(".i2").length;
-            const imageWidth = document.querySelector(".i2").clientWidth; 
-    
-            function moveLeft() {
-                if (index > 0) {
-                    index--;
-                } else {
-                    index = totalImages - 1;
-                }
-                updatePosition();
-            }
-    
-            function moveRight() {
-                if (index < totalImages - 1) {
-                    index++;
-                } else {
-                    index = 0;
-                }
-                updatePosition();
-            }
-    
-            function updatePosition() {
-                container.style.transform = `translateX(${-index * imageWidth}px)`;
-            }
-            function nextImage() {
-                index = (index + 1) % totalImages;
-                container.style.transform = `translateX(-${index * 1876}px)`;
-            }
-            setInterval(nextImage, 12000); // Défilement toutes les 3 secondes
+    <h2>👥 Membres de l’Empire</h2>
+    <div class="member-list">
+      <p class="member"><span class="emperor">👑 Maxime – Empereur</span></p>
+      <p class="member"><span class="general">🛡️ Diel – Général</span></p>
+      <p class="member"><span class="general">🛡️ Lucifer – Général</span></p>
+      <p class="member"><span class="soldier">🪖 Donn – Membre</span></p>
+      <p class="member"><span class="soldier">🪖 Dobi – Membre</span></p>
+      <p class="member"><span class="soldier">🪖 Katako – Membre</span></p>
+      <p class="member"><span class="soldier">🪖 Youkobox – Membre</span></p>
+      <p class="member"><span class="soldier">🪖 Mline – Membre</span></p>
+      <p class="member"><span class="soldier">🪖 Saker – Membre</span></p>
+    </div>
 
-        </script>
-        <div class="D3">
-            <h1>⚠️ Annonces ⚠️</h1><!--⚠️ Annonces ⚠️-->
-            <h1></h1><!--⚠️ Zone de l'annonces (balise (br)) -->
-            <h3></h3><!--⚠️ Aucune Annonces ⚠️-->
-        </div>
-        <div class="D4">
-            <h1>roles</h1><!--Rôles-->
-            <div class="D5">
-                <h2>lieutenant</h2><!--⚠️ Annonces ⚠️-->
-                <h5>Dans Guild Wars 2, un lieutenant est un officier de guilde chargé d’assister les
-                     généraux et le chef. Il aide à organiser les groupes en McM, PvE ou PvP et veille
-                      à la discipline des membres. Il transmet les consignes stratégiques et assure la bonne exécution des plans en combat. Il peut recruter de nouveaux joueurs et les
-                       former aux mécaniques du jeu. Son rôle est essentiel pour fluidifier la
-                        communication et renforcer la cohésion. Il agit comme un relais entre les soldats
-                         et les hauts gradés de la guilde.</h5>            </div>
-            <div class="D5">
-                <h2>Géneral</h2><!--⚠️ Annonces ⚠️-->
-                <h5>Dans Guild Wars 2, un général est un stratège et meneur de troupes dans une guilde. Il aide à organiser les événements, coordonne les attaques en McM et soutient les membres dans leur progression. Il possède souvent une bonne connaissance des mécaniques de jeu et des builds optimisés. Son rôle inclut la gestion des conflits et la prise de décisions tactiques. Il sert de lien entre les membres et le chef de guilde. Son autorité et son expérience en font un pilier essentiel du groupe.</h5>
-            </div>
-            <div class="D5">
-                <h2>Soldat</h2><!--⚠️ Annonces ⚠️-->
-                <h5>Dans Guild Wars 2, un soldat est un membre actif de la guilde qui participe aux batailles et aux événements organisés. Il suit les ordres des lieutenants et des généraux en McM, PvE ou PvP. Il doit maîtriser son rôle en combat et s’adapter aux stratégies mises en place. Il contribue à la progression de la guilde en aidant ses coéquipiers et en se perfectionnant. Son engagement et sa discipline sont essentiels pour la réussite collective. C’est l’épine dorsale de l’armée de la guilde.</h5>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <h5>Contact</h5>
-        <div class="D6">
-            <h6>Email: </h6>
-            <p class="p1">lempire.gw2@gmail.com</p>
-        </div>
-        <div class="D6">
-            <h6>Discord: </h6>
-            <p class="p1">https://discord.gg/46bqp2NFay</p>
-        </div>
-    </footer>
+    <div class="event-bar">
+      <div class="event-text">📣 Prochain événement : Speedrun spécial fractales – Vendredi à 20h ! Rejoins-nous ! 📣</div>
+    </div>
+
+    <a href="#" class="button">Rejoindre notre Discord</a>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://metabattle.com/" target="_blank">MetaBattle</a>
+      <a href="https://www.lebusmagique.fr/" target="_blank">Le Bus Magique</a>
+    </div>
+    <p>&copy; 2025 L’Empire – Guilde Guild Wars 2. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
